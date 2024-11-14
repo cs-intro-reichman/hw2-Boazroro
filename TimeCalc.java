@@ -16,6 +16,12 @@ public class TimeCalc {
         updatedminutes = updatedminutes%60;
         
      }
+     else{}
+     if (updatedhours== 23)
+     {
+        System.out.println("00" + ":" + "0" + updatedminutes);
+     }
+     else
      System.out.println(updatedhours + ":" + updatedminutes);
 
     }
