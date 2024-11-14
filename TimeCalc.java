@@ -6,28 +6,18 @@ public class TimeCalc {
         int addedminutes = Integer.parseInt(args[1]);
         int updatedhours = hours + addedminutes / 60;
         int updatedminutes = minutes + addedminutes % 60;
-        if (updatedhours >= 24) {
-            updatedhours = updatedhours % 24;
+        if (hours >= 24) {
 
-        } else {
+            updatedhours = hours % 24;
+
+        } 
+        else {
+        }
+        if (minutes > 60) {
+            updatedminutes = minutes%60;
 
         }
-        if(updatedhours==23)
-        {
-            
-           String updatedhours1 = "00";
-            updatedminutes = updatedminutes % 60;
-        System.out.println(updatedhours1 + ":" + "0" + updatedminutes);
+        System.out.println(updatedhours + ":" + updatedminutes);
 
-        }
-    
-            
-      else if (updatedminutes>59||updatedminutes<10 && updatedhours!=23)
-
-    {
-        //updatedminutes = updatedminutes % 60;
-       // System.out.println(updatedhours + ":" + "0" + updatedminutes);
-    } 
-
-   else System.out.println(updatedhours+":"+updatedminutes);
-}}
+    }
+}
