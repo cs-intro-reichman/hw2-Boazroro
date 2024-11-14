@@ -5,19 +5,18 @@ public class TimeCalc {
         int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         int addedminutes = Integer.parseInt(args[1]);
         int updatedhours = hours + addedminutes / 60;
-        int updatedminutes = minutes + addedminutes % 60;
-        if (hours >= 24) {
+        int updatedminutes = minutes + addedminutes  % 24;
+        //Not completed yet
+     if (updatedhours>=24) {
+        updatedhours = updatedhours%24;
+        
+     } else{}
 
-            updatedhours = hours % 24;
-
-        } 
-        else {
-        }
-        if (minutes > 60) {
-            updatedminutes = minutes%60;
-
-        }
-        System.out.println(updatedhours + ":" + updatedminutes);
+     if (updatedminutes>=60) {
+        updatedminutes = updatedminutes%60;
+        
+     }
+     System.out.println(updatedhours + ":" + updatedminutes);
 
     }
 }
