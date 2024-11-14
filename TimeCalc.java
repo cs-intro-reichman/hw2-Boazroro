@@ -23,10 +23,9 @@ public class TimeCalc {
         } else if (updatedhours < 10) {
             System.out.println("0" + updatedhours + ":" + updatedminutes);
 
-        }
-        else
-        
-        {
+        } else if (updatedminutes == 0) {
+            System.out.println(updatedhours + ":" + "0" + updatedminutes);
+        } else {
             System.out.println(updatedhours + ":" + updatedminutes);
         }
 
