@@ -4,25 +4,32 @@ public class TimeCalc {
         int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
         int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         int addedminutes = Integer.parseInt(args[1]);
-        int updatedhours = hours + addedminutes / 60;
-        int updatedminutes = minutes + addedminutes  % 24;
-        //Not completed yet
-     if (updatedhours>=24) {
-        updatedhours = updatedhours%24;
-        
-     } else{}
+        int total = hours * 60 + minutes + addedminutes;
+        int updatedhours = total / 60;
+        int updatedminutes = total % 60;
+        if (updatedhours >= 24 || updatedhours == 0) {
+            updatedhours = updatedhours % 24;
 
-     if (updatedminutes>=60) {
-        updatedminutes = updatedminutes%60;
+        } else {
+        }
+        if (updatedminutes <= 10 && (updatedhours == 0 || updatedhours < 10)) {
+            System.out.println("0" + updatedhours + ":" + "0" + updatedminutes);
+        } else if (updatedminutes <= 10 && updatedhours < 10) {
+
+            System.out.println(updatedhours + ":" + "0" + updatedminutes);
+        } else if (updatedhours == 0) {
+
+            System.out.println("0" + updatedhours + ":" + +updatedminutes);
+        } else if (updatedhours < 10) {
+            System.out.println("0" + updatedhours + ":" + updatedminutes);
+
+        }
+        else
         
-     }
-     else{}
-     if (updatedhours== 23)
-     {
-        System.out.println("00" + ":" + "0" + updatedminutes);
-     }
-     else
-     System.out.println(updatedhours + ":" + updatedminutes);
+        {
+            System.out.println(updatedhours + ":" + updatedminutes);
+        }
 
     }
+
 }
