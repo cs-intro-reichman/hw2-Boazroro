@@ -4,7 +4,7 @@ public class Cheers {
                 String giveme = args[0].toUpperCase();
                 String let = "AEFHILMNORSX";
                 int n = Integer.parseInt(args[1]);
-                int a = 0;
+                int a = 5;
 
                 for (int i = 0; giveme.length() > i; i++) {
                         char cia = giveme.charAt(i);
@@ -18,7 +18,7 @@ public class Cheers {
 
                         {
 
-                                System.out.println("Give me a " + giveme.charAt(i) + ": " + giveme.charAt(i)
+                                System.out.println("Give me a  " + giveme.charAt(i) + ": " + giveme.charAt(i)
                                                 + "!");
                         }
                 }
